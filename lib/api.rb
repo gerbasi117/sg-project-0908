@@ -6,4 +6,5 @@ class API
         
         name =JSON.parse(response)["name"].each do |c|
     end 
+    
 end
