@@ -1,4 +1,4 @@
-class CHARACTER_INFO
+class Character_info
     @@all=[]
    
     def initialize
