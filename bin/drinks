@@ -1,5 +1,11 @@
 #!/usr/bin/env ruby
 
-require_relative '../config/environment'
+require 'pry'
+require 'HTTParty'
+require 'json'
 
-CLI.new.run
+require_relative '../lib/cli'
+require_relative '../lib/api'
+require_relative '../lib/input_info'
+
+CLI.new.lookup

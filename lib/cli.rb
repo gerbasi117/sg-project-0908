@@ -1,5 +1,5 @@
 class CLI
-    def menu
+    def lookup
         puts ""
         puts "EnRicklopedia"
         puts "_____________________"
