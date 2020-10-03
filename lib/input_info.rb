@@ -2,14 +2,15 @@ class Character_info
     attr_accessor :name, :input, :character_id, :status, :species, :type, :gender, :origin
     @@all =[]
    
-    def initialize(name: , input: , character_id: , status:, species:, type:, gender:, origin: )
-        @name = name
-        @input = input
+    def initialize(name: , input: , character_id: , status:, species:, type:, gender:, origin:, inputs: )
+        @name = name        
         @character_id = character_id
         @status = status
         @species = species
         @type = type
         @gender = gender
+        @input = input
+        @inputs = []
         @@all << self
     end
 
