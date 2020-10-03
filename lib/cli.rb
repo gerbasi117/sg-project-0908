@@ -7,19 +7,19 @@ class CLI
         puts "Enter Character name to get information or 'exit' to exit"
         puts ""
         @char_name = gets.strip.downcase
-        API.get_title(@char_name)   
-        print_info
-        prompt
+        API.get_title(@char_name)  
+        print_info  
+        prompt 
         input = gets.strip.downcase
-        while input != 'exit' do 
-            if input == "char_name"
+            while input != 'exit' do 
+                if input == "char_name"
 
-                elsif input.to_i > 0 && input.to_i <= Character_info.find_by_name(@char_name).count
-                 title = Character_info.find_by_name(@char_name)[input.to_i-1]
-                 API.get_title(title) if !title.
-                end
-            end
-        end
+                    elsif input.to_i > 0 && input.to_i <= Character_info.find_by_name(@char_name).count
+                     title = Character_info.find_by_name(@char_name)[input.to_i-1]
+                     API.get_title(title) if !title.
+                    end
+                end    
+            end            
     end
 
     def prompt
@@ -34,3 +34,27 @@ class CLI
         end
     end
 end
+
+
+
+# title = Character_info.all
+#         title.each.with_index(1) do |d, i|
+#             puts "#{i}, #{d.name}"
+
+
+
+
+
+
+
+
+
+# input = gets.strip.downcase
+            # while input != 'exit' do 
+            #     if input == "char_name"
+
+            #         elsif input.to_i > 0 && input.to_i <= Character_info.find_by_name(@char_name).count
+            #          title = Character_info.find_by_name(@char_name)[input.to_i-1]
+            #          API.get_title(title) if !title.
+            #         end
+            #     end
