@@ -12,7 +12,7 @@ class API
         url="https://rickandmortyapi.com/api/character/#{character_id}"
         uri=URI(url)
         response=Net::HTTP.get(uri)
-        Character_id_2 = JSON.parse(response)["results"] 
+        character_id_2 = JSON.parse(response)["results"] 
     end
 
 end
