@@ -8,28 +8,24 @@ class CLI
         puts ""
         @char_name = gets.strip.downcase
         API.get_title(@char_name)  
-        # if @char_name != name
-        #     put "Incorrect Input"
-        # end
             print_info         
             prompt 
             input = gets.strip.downcase
-            #binding.pry
             while input != 'exit' do 
                 if input == "char_name"
                     @char_name = gets.strip.downcase
                     API.get_title(@char_name) if Character_info.find_by_name(@char_name).length == 0
                     print_title                              
-                  elsif input.to_i > 0 #&& input.to_i <-Character_info.find_by_name(@char_name).count
+                elsif input.to_i > 0 
                     title = Character_info.find_by_name(@char_name)[input.to_i-1]
                       API.get_info(title) if !title.status
                       print_final(title)
                       prompt
-                         else 
-                             puts "Incorrect Input"
-                         end
+                    else 
+                        puts "Incorrect Input"
+                    end
                       input = gets.strip.downcase                
-                 end               
+                end               
             end
 
     def prompt
@@ -52,12 +48,4 @@ end
 
 
 
- #> 0 && input.to_i <= Character_info.find_by_name(@char_name).count
-                #          title = Character_info.find_by_name(@char_name)[input.to_i-1]
-                #          API.get_title(title) #if 
-                #          print_title(title)
-
-
-
-                # Final_character_info.all.each.with_index(1) do |f, i|
-                #     puts "#{i} #{f.name} #{f.char_id} #{f.status} #{f.species} #{f.type} #{f.gender}"
+ 

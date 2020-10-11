@@ -5,5 +5,3 @@ require 'json'
 require_relative '../lib/cli'
 require_relative '../lib/api'
 require_relative '../lib/input_info'
-
-require_relative '../bin/config/environment'

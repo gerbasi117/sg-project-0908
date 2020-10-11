@@ -24,20 +24,3 @@ class API
 end
 
 
-# choice_info = JSON.parse(response)["results"][0]
-        # title.status = choice_info[status]
-        # title.species = choice_info[species]
-        # title.type = choice_info[type]
-        # choice_info.keys.each do |i|
-        #     title.char_attributes << choice_info|i| if (i.include? "char_name")  && choice_info[i] != "" && choice_info[i] != nil 
-        #end
-        #binding.pry
-        #end
-#= choice_info[gender]
-
-
-# final_info=JSON.parse(response)["results"].each do |f|
-#     Final_character_info.new(name: f["name"], id: f["id"], status: f["status"], species: f["species"], type: f["type"], gender: f["gender"], char_id: char_id)# if f["id"] != nil
-# end
-# binding.pry
-# end
